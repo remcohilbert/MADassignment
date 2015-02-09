@@ -38,8 +38,21 @@
 	</head>
 	<body>
 		<div data-role="page" id="main" data-theme="a">
-			<header data-role="header" data-position="fixed">
+			<header data-role="header" data-position="fixed" data-theme="b">
 				<h1>Game Information App</h1>
+				<nav data-role="navbar">
+					<ul>
+						<li>
+							<a href="home" data-icon="home">Home</a>
+						</li>
+						<li>
+							<a href="main" data-icon="grid">Articles</a>
+						</li>
+						<li>
+							<a href="info" data-icon="info">Info</a>
+						</li>
+					</ul>
+				</nav>
 			</header>
 			<article data-role="content">
 				<ul data-role="listview" data-filter="true">
@@ -65,21 +78,6 @@
 					</li>
 				</ul>
 			</article>
-			<footer data-role="footer" data-position="fixed" data-theme="b">
-				<nav data-role="navbar">
-					<ul>
-						<li>
-							<a href="home" data-icon="home">Home</a>
-						</li>
-						<li>
-							<a href="main" data-icon="grid">Articles</a>
-						</li>
-						<li>
-							<a href="info" data-icon="info">Info</a>
-						</li>
-					</ul>
-				</nav>
-			</footer>
 		</div><!-- Main Page -->
 
 		<div data-role="page" id="xbox" data-theme="a">
