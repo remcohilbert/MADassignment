@@ -44,7 +44,7 @@
     	<article data-role="content">
     		<ul data-role="listview" data-filter="true">
     			<li>
-    				<a href="#xbox">
+    				<a href="#xbox" data-transition="slide">
     					<h1>XBOX ONE FEBRUARY UPDATE</h1>
     					<img src="images/xbox_tn.jpg" alt="XBOX ONE" />
     					<p>Xbox One developer Microsoft introduces the February
@@ -52,14 +52,14 @@
     				</a>
     			</li>
     			<li>
-    				<a href="#assassin">
+    				<a href="#assassin" data-transition="slide">
     					<h1>ASSASSIN'S CREED DLC</h1>
     					<img src="images/assassins_creed_tn.jpg" alt="ASSASSIN'S CREED" />
     					<p>Ubisoft Launches new DLC for Assassin's Creed</p>
     				</a>
     			</li>
     			<li>
-    				<a href="#oculus">
+    				<a href="#oculus" data-transition="slide">
     					<h1>OCULUS ON ANDROID</h1>
     					<img src="images/oculus_tn.jpg" alt="OCULUS" />
     					<p>Oculus Rift usable with Android 
@@ -75,7 +75,7 @@
     					<a href="home" data-icon="home">Home</a>
     				</li>
     				<li>
-    					<a href="photos" data-icon="grid">Articles</a>
+    					<a href="main" data-icon="grid">Articles</a>
     				</li>
     				<li>
     					<a href="info" data-icon="info">Info</a>
@@ -87,9 +87,14 @@
     	
     	<div data-role="page" id="xbox" data-theme="a">
     		<header data-role="header" data-position="fixed">
-    			<h1>Xbox One February Update</h1>
-    			<a href="#main" data-icon="grid" data-iconpos="notetext">Back</a>
+    			<h1>Game Information App</h1>
+    			<a href="#main" data-icon="grid" data-transition="slide" data-direction="reverse" data-iconpos="notetext">Back</a>
     		</header>
+    		<p></p>
+    		<header data-role="header">
+    			<h1>Xbox One February Update</h1>
+    		</header>
+    		<p></p>
     		<center>
     		<img src="images/xbox.jpg" class="fullscreen" alt="XBOX ONE" />
     		</center>
@@ -109,9 +114,14 @@
     	
     	<div data-role="page" id="assassin" data-theme="a" class="fullscreen">
     		<header data-role="header" data-position="fixed">
-    			<h1>Assassin's Creed DLC</h1>
-    			<a href="#main" data-icon="grid" data-iconpos="notetext">Back</a>
+    			<h1>Game Information App</h1>
+    			<a href="#main" data-icon="grid" data-transition="slide" data-direction="reverse" data-iconpos="notetext">Back</a>
     		</header>
+    		<p></p>
+    		<header data-role="header">
+    			<h1>Assassin's Creed DLC</h1>
+    		</header>
+    		<p></p>
     		<center>
     		<img src="images/assassins_creed.jpg" class="fullscreen" alt="ASSASSIN'S CREED" />
     		</center>
@@ -132,9 +142,14 @@
     		
     	<div data-role="page" id="oculus" data-theme="a">
     		<header data-role="header" data-position="fixed">
-    			<h1>Oculus on Android</h1>
-    			<a href="#main" data-icon="grid" data-iconpos="notetext">Back</a>
+    			<h1>Game Information App</h1>
+    			<a href="#main" data-icon="grid" data-transition="slide" data-direction="reverse" data-iconpos="notetext">Back</a>
     		</header>
+    		<p></p>
+    		<header data-role="header">
+    			<h1>Oculus On Android</h1>
+    		</header>
+    		<p></p>
     		<center>
     		<img src="images/oculus.jpg" class="fullscreen" alt="OCULUS" />
     		</center>
