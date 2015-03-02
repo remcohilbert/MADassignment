@@ -34,6 +34,7 @@
 				height: 100%;
 			}
 		</style>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
@@ -78,6 +79,27 @@
 		</div><!-- Main Page -->
 
 		<div data-role="page" id="xbox" data-theme="a">
+			<script>
+				$(document).on('pagebeforeshow', '#xbox', function() {
+
+					if ( typeof (Storage) !== "undefined") {
+
+						//localStorage.removeItem("ratingPointsXBOX");
+
+						var rPxbox = localStorage.getItem("ratingPointsXBOX");
+
+						if (rPxbox == null) {
+							alert("This article is not yet rated");
+						}
+
+						if (rPxbox != null) {
+							$("#user_rating_xbox").val(rPxbox);
+							$('user_rating_xbox').selectmenu("refresh");
+							alert("The current rating is: " + rPxbox);
+						}
+					}
+				});
+			</script>
 			<header data-role="header" data-position="fixed">
 				<h1>Game Information App</h1>
 				<a href="#main" data-icon="home" data-transition="slide" data-direction="reverse">Home</a>
@@ -105,21 +127,48 @@
 			</div>
 			<p></p>
 			<div id="notation">
-					<form>
-						<label for="user_rating_xbox" class="select"><h2>Rate this article!</h2></label>
-						<select name="user_rating_xbox" id="user_rating_xbox" data-theme="b" data-native-menu="false">
-							<option value="one" class="one" selected="selected">5 Stars - Awesomelevel over 9000!</option>
-							<option value="two" class="two">4 Stars - Pretty sweet, brah!</option>
-							<option value="three" class="three">3 Stars - It's alright, I guess...</option>
-							<option value="four" class="four">2 Stars - WTF is this shit?</option>
-							<option value="four" class="five">1 Star - KILL IT WITH FIRE!</option>
-						</select>
-					</form>
-				</div>
-				<p></p>
+				<form>
+					<label for="user_rating_xbox" class="select"><h2>Rate this article!</h2></label>
+					<select name="user_rating_xbox" id="user_rating_xbox" data-theme="b" data-native-menu="false">
+						<option value="not rated." class="rate">Please rate this article...</option>
+						<option value="5 Stars." class="five">5 Stars - Awesomelevel over 9000!</option>
+						<option value="4 Stars." class="four">4 Stars - Pretty sweet, brah!</option>
+						<option value="3 Stars." class="three">3 Stars - It's alright, I guess...</option>
+						<option value="2 Stars." class="two">2 Stars - WTF is this shit?</option>
+						<option value="1 Star." class="one">1 Star - KILL IT WITH FIRE!</option>
+					</select>
+					<script>
+						$("#user_rating_xbox").change(function() {
+							localStorage.setItem("ratingPointsXBOX", this.value);
+						});
+					</script>
+				</form>
+			</div>
+			<p></p>
 		</div><!-- Page Xbox -->
 
 		<div data-role="page" id="assassin" data-theme="a" class="fullscreen">
+			<script>
+				$(document).on('pagebeforeshow', '#assassin', function() {
+
+					if ( typeof (Storage) !== "undefined") {
+
+						//localStorage.removeItem("ratingPointsAC");
+
+						var rPac = localStorage.getItem("ratingPointsAC");
+
+						if (rPac == null) {
+							alert("This article is not yet rated.");
+						}
+
+						if (rPac != null) {
+							$("#user_rating_ac").val(rPac);
+							$('user_rating_ac').selectmenu("refresh");
+							alert("The current rating is: " + rPac);
+						}
+					}
+				});
+			</script>
 			<header data-role="header" data-position="fixed">
 				<h1>Game Information App</h1>
 				<a href="#main" data-icon="home" data-transition="slide" data-direction="reverse">Home</a>
@@ -148,21 +197,48 @@
 			</div>
 			<p></p>
 			<div id="notation">
-					<form>
-						<label for="user_rating_ac" class="select"><h2>Rate this article!</h2></label>
-						<select name="user_rating_ac" id="user_rating_ac" data-theme="b" data-native-menu="false">
-							<option value="one" class="one" selected="selected">5 Stars - Awesomelevel over 9000!</option>
-							<option value="two" class="two">4 Stars - Pretty sweet, brah!</option>
-							<option value="three" class="three">3 Stars - It's alright, I guess...</option>
-							<option value="four" class="four">2 Stars - WTF is this shit?</option>
-							<option value="four" class="five">1 Star - KILL IT WITH FIRE!</option>
-						</select>
-					</form>
-				</div>
-				<p></p>
+				<form>
+					<label for="user_rating_ac" class="select"><h2>Rate this article!</h2></label>
+					<select name="user_rating_ac" id="user_rating_ac" data-theme="b" data-native-menu="false">
+						<option value="not rated." class="rate">Please rate this article...</option>
+						<option value="5 Stars." class="five">5 Stars - Awesomelevel over 9000!</option>
+						<option value="4 Stars." class="four">4 Stars - Pretty sweet, brah!</option>
+						<option value="3 Stars." class="three">3 Stars - It's alright, I guess...</option>
+						<option value="2 Stars." class="two">2 Stars - WTF is this shit?</option>
+						<option value="1 Star." class="one">1 Star - KILL IT WITH FIRE!</option>
+					</select>
+					<script>
+						$("#user_rating_ac").change(function() {
+							localStorage.setItem("ratingPointsAC", this.value);
+						});
+					</script>
+				</form>
+			</div>
+			<p></p>
 		</div><!-- Page Assassin's Creed -->
 
 		<div data-role="page" id="oculus" data-theme="a">
+			<script>
+				$(document).on('pagebeforeshow', '#oculus', function() {
+
+					if ( typeof (Storage) !== "undefined") {
+
+						//localStorage.removeItem("ratingPointsOR");
+
+						var rPoculus = localStorage.getItem("ratingPointsOR");
+
+						if (rPoculus == null) {
+							alert("This article is not yet rated");
+						}
+
+						if (rPoculus != null) {
+							$("#user_rating_or").val(rPoculus);
+							$('user_rating_or').selectmenu("refresh");
+							alert("The current rating is: " + rPoculus);
+						}
+					}
+				});
+			</script>
 			<header data-role="header" data-position="fixed">
 				<h1>Game Information App</h1>
 				<a href="#main" data-icon="home" data-transition="slide" data-direction="reverse">Home</a>
@@ -186,18 +262,24 @@
 			</p>
 			<p></p>
 			<div id="notation">
-					<form>
-						<label for="user_rating_or" class="select"><h2>Rate this article!</h2></label>
-						<select name="user_rating_or" id="user_rating_or" data-theme="b" data-native-menu="false">
-							<option value="one" class="one" selected="selected">5 Stars - Awesomelevel over 9000!</option>
-							<option value="two" class="two">4 Stars - Pretty sweet, brah!</option>
-							<option value="three" class="three">3 Stars - It's alright, I guess...</option>
-							<option value="four" class="four">2 Stars - WTF is this shit?</option>
-							<option value="four" class="five">1 Star - KILL IT WITH FIRE!</option>
-						</select>
-					</form>
-				</div>
-				<p></p>
+				<form>
+					<label for="user_rating_or" class="select"><h2>Rate this article!</h2></label>
+					<select name="user_rating_or" id="user_rating_or" data-theme="b" data-native-menu="false">
+						<option value="not rated." class="rate">Please rate this article...</option>
+						<option value="5 Stars." class="five">5 Stars - Awesomelevel over 9000!</option>
+						<option value="4 Stars." class="four">4 Stars - Pretty sweet, brah!</option>
+						<option value="3 Stars." class="three">3 Stars - It's alright, I guess...</option>
+						<option value="2 Stars." class="two">2 Stars - WTF is this shit?</option>
+						<option value="1 Star." class="one">1 Star - KILL IT WITH FIRE!</option>
+					</select>
+					<script>
+						$("#user_rating_or").change(function() {
+							localStorage.setItem("ratingPointsOR", this.value);
+						});
+					</script>
+				</form>
+			</div>
+			<p></p>
 		</div><!-- Page Oculus -->
 	</body>
 </html>
