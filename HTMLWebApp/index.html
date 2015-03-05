@@ -41,16 +41,6 @@
 		<div data-role="page" id="main" data-theme="a">
 			<header data-role="header" data-position="fixed" data-theme="b">
 				<h1>Game Information App</h1>
-				<nav data-role="navbar">
-					<ul>
-						<li>
-							<a href="rate" data-icon="star">Sort By Rating</a>
-						</li>
-						<li>
-							<a href="info" data-icon="info">Info</a>
-						</li>
-					</ul>
-				</nav>
 			</header>
 			<article data-role="content">
 				<ul data-role="listview" data-filter="true">
@@ -83,8 +73,6 @@
 				$(document).on('pagebeforeshow', '#xbox', function() {
 
 					if ( typeof (Storage) !== "undefined") {
-
-						//localStorage.removeItem("ratingPointsXBOX");
 
 						var rPxbox = localStorage.getItem("ratingPointsXBOX");
 
@@ -153,8 +141,6 @@
 
 					if ( typeof (Storage) !== "undefined") {
 
-						//localStorage.removeItem("ratingPointsAC");
-
 						var rPac = localStorage.getItem("ratingPointsAC");
 
 						if (rPac == null) {
@@ -222,9 +208,7 @@
 				$(document).on('pagebeforeshow', '#oculus', function() {
 
 					if ( typeof (Storage) !== "undefined") {
-
-						//localStorage.removeItem("ratingPointsOR");
-
+						
 						var rPoculus = localStorage.getItem("ratingPointsOR");
 
 						if (rPoculus == null) {
